@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Hotel Vajamar</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="loader"></div>
+        <header>
+            <div class="logo-cont">
+                <img src="img/logotipo.png" alt="">
+            </div>
+
+            <nav>
+                <ul><a class="links-nav" id="home" >Home</a></ul>
+                <ul><a class="links-nav" id="explore">Explore</a></ul>
+                <ul><a class="links-nav" id="rooms" >Rooms</a></ul>
+                <ul><a class="links-nav" id="about" >About</a></ul>
+                <ul><a class="links-nav" id="contact">Contact</a></ul>
+            </nav>
+
+            <button class="buttonBlue-reservar">
+                Reservar Ahora!
+            </button>
+
+            <div class="btns-mobile">
+                <div class="menu-icon">
+                    <img width="35" height="35" src="https://img.icons8.com/ios-filled/50/menu--v6.png" alt="menu--v6" class="menu"/>
+                </div>
+    
+                <div class="exit-icon">
+                    <img width="48" height="48" src="https://img.icons8.com/material-two-tone/48/multiply.png" alt="multiply"/>
+                </div>
+            </div>
+        </header>
+        <div class="contenido">
+            <div class="menu-mobile">
+                <ul><a class="nav-mobile" id="home">Home</a></ul>
+                <ul><a class="nav-mobile" id="explore">Explore</a></ul>
+                <ul><a class="nav-mobile" id="rooms">Rooms</a></ul>
+                <ul><a class="nav-mobile" id="about">About</a></ul>
+                <ul><a class="nav-mobile" id="contact">Contact</a></ul>
+                <button class="buttonBlue-reservar button-mobile">
+                    Reservar Ahora!
+                </button>
+            </div>
+            <div class="filter"></div>
+            <div class="home sections">
+                <div class="hero">
+                    <div class="hero1">
+                        <div class="text">
+                            <h2>Mas que un Hotel, Somos tu Mejor Opcion!</h2>
+                        </div>
+
+                        <div class="buttons-cont">
+                            <button class="buttonBlue-reservar button-hero">Reservar Ahora!</button>
+                            <div class="buttonplay-cont">
+                                <img src="img/play btn.png" alt="">
+                                <p>Mira Nuestras Instalaciones!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero2">
+                    </div>
+
+                    <div class="booking-cont">
+                        <div class="tcuarto-booking box-booking">
+                            <div class="icon">
+                                <img src="img/cuarto.png" alt="">
+                            </div>
+                            <div class="details">
+                                <p>Tipo de Cuarto</p>
+                                <select id="select-cuarto">
+                                    <option value="standard">Standard</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="personas-booking box-booking">
+                            <div class="icon">
+                                <img src="img/personas.png" alt="">
+                            </div>
+                            <div class="details">
+                                <p>Personas</p>
+                                <select id="select-personas">
+                                    <option value="1">1</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="ingreso-booking box-booking">
+                            <div class="icon">
+                                <img src="img/ingreso.png" alt="">
+                            </div>
+                            <div class="details">
+                                <p>Ingreso</p>
+                                <input type="date" id="ingreso-date">
+                            </div>
+                        </div>
+
+                        <div class="salida-booking box-booking">
+                            <div class="icon">
+                                <img src="img/salida.png" alt="">
+                            </div>
+                            <div class="details">
+                                <p>Salida</p>
+                                <input type="date" id="salida-date">
+                            </div>
+                        </div>
+
+                        <button class="buttonBlue-reservar button-booking">Reservar Ahora!</button>
+                    </div>
+                </div>
+
+                <div class="services-cont">
+                    <div class="text">
+                        <h2>Nuestros Servicios</h2>
+                        <p>Ofrecemos modernas instalaciones para su comodidad.</p>
+                    </div>
+
+                    <div class="services-boxes">
+                        <div class="box piscina">
+                            <img class="default" src="img/piscina.png" alt="">
+                            <img class="hover-img" src="img/piscina hover.png" alt="">
+                            <div class="title">Pisicina</div>
+                        </div>
+                        <div class="box wifi">
+                            <img class="default" src="img/wifi.png" alt="">
+                            <img class="hover-img" src="img/wifi hover.png" alt="">
+                            <div class="title">wifi</div>
+                            
+                        </div>
+                        <div class="box desayuno">
+                            <img class="default" src="img/desayuno.png" alt="">
+                            <img class="hover-img" src="img/desayuno hover.png" alt="">
+                            <div class="title">desayuno</div>
+
+                        </div>
+                        <div class="box gym">
+                            <img class="default" src="img/gym.png" alt="">
+                            <img class="hover-img" src="img/gym hover.png" alt="">
+                            <div class="title">gym</div>
+
+                        </div>
+                        <div class="box ept">
+                            <img class="default" src="img/ept.png" alt="">
+                            <img class="hover-img" src="img/ept hover.png" alt="">
+                            <div class="title">Entretenimiento para todos</div>
+
+                        </div>
+                        <div class="box 24/7">
+                            <img class="default" src="img/24:7.png" alt="">
+                            <img class="hover-img" src="img/24:7 hover.png" alt="">
+                            <div class="title">Servicio 24/7</div>
+
+                        </div>
+                        <div class="box lavadero">
+                            <img class="default" src="img/lavadero.png" alt="">
+                            <img class="hover-img" src="img/lavadero hover.png" alt="">
+                            <div class="title">lavadero</div>
+
+                        </div>
+                        <div class="box pqd">
+                            <img class="default" src="img/pqd.png" alt="">
+                            <img class="hover-img" src="img/pqd hover.png" alt="">
+                            <div class="title">Parqueadero</div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="habitaciones-home">
+                    <div class="filter-bg"></div>
+
+                    <div class="content-habitaciones">
+                        <div class="title-habitaciones">
+                            <h2>Habitaciones de Lujo</h2>
+                            <div class="separador"></div>
+                        </div>
+    
+                        <div class="boxes-habitaciones">
+                            <div class="box-habitacion">
+                                <div class="contorno-img">
+                                    <div class="cont-disponible">
+                                        <p>X habitaciones disponibles</p>
+                                    </div>
+                                    <div class="cont-img">
+                                        <img src="img/box1.jpeg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-habitacion">
+                                <div class="contorno-img">
+                                    <div class="cont-disponible">
+                                        <p>X habitaciones disponibles</p>
+                                    </div>
+                                    <div class="cont-img">
+                                        <img src="img/box2.jpeg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-habitacion">
+                                <div class="contorno-img">
+                                    <div class="cont-disponible">
+                                        <p>X habitaciones disponibles</p>
+                                    </div>
+                                    <div class="cont-img">
+                                        <img src="img/box3.jpeg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="ubicacion-cont">
+                    <h2>Como encontrarnos ?</h2>
+
+                    <div class="map-cont"><div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=1924&amp;height=696&amp;hl=en&amp;q=Hotel vajamar&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://strandsgame.net/">Strands</a></div><style>.mapouter{position:static;text-align:right;width:100%;height:696px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:696px;}.gmap_iframe {height:696px!important;}</style></div></div>
+                    <div class="map-mobile">
+                        <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=478&amp;height=708.5&amp;hl=en&amp;q=Hotel Vajamar&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://strandsgame.net/">Strands</a></div><style>.mapouter{position:static;text-align:right;width:100%;height:708.5px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:708.5px;}.gmap_iframe {height:708.5px!important;}</style></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="explore sections">
+                <div class="video-cont">
+
+                </div>
+
+                <div class="instalaciones-cont">
+                    <div class="title-instalaciones">
+                        <h2>Mira Nuestras Instalaciones!</h2>
+                    </div>
+
+                    <div class="boxes-instalaciones">
+                        <div class="box-instalaciones box-habitacion">
+                            <div class="cont-img">
+                                <img src="img/habitaciones.jpeg" alt="">
+                            </div>
+                            <div class="cont-text">
+                                <p class="title-box">Habitaciones de Lujo</p>
+                                <p class="desc-box">Insertar Copy</p>
+
+
+                            </div>
+                        </div>
+                        <div class="box-instalaciones box-recreacion">
+                            <div class="cont-img">
+                                <img src="img/recreacion.jpeg" alt="">
+                            </div>
+                            <div class="cont-text">
+                                <p class="title-box">Zona Recreacional</p>
+                                <p class="desc-box">Insertar Copy</p>
+
+
+                            </div>
+                        </div>
+                        <div class="box-instalaciones box-restaurante">
+                            <div class="cont-img">
+                                <img src="img/restaurante.jpeg" alt="">
+                            </div>
+                            <div class="cont-text">
+                                <p class="title-box">Restaurantes</p>
+                                <p class="desc-box">Insertar Copy</p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rooms sections"></div>
+
+            <div class="about sections"></div>
+
+            <div class="contact sections"></div>
+        </div>
+        <footer>
+            <div class="info-cont">
+                <div class="info-hotel">
+                    <h3>Vajamar Hotel</h3>
+                    <p>Estamos ubicados en una concurrida calle comercial se encuentra a 4 minutos a pie de la plaza Alfonso López, a 4 km del parque Leyenda Vallenata y a 5 km del aeropuerto Alfonso López Pumarejo. Ofrece un restaurante tranquilo con decoración luminosa, que sirve cocina internacional. Además, cuenta con piscina al aire libre, jacuzzi, bar junto a la piscina y spa con sauna húmedo. También tiene un club nocturno.</p>
+                </div>
+
+                <div class="block">
+                    <div class="atajos-cont cont-footer">
+                        <p>Atajos</p>
+                        <div class="opcions">
+                            <ul><a class="links-nav nav-footer" id="home" href="">Home</a></ul>
+                            <ul><a class="links-nav nav-footer" id="explore" href="">Explore</a></ul>
+                            <ul><a class="links-nav nav-footer" id="rooms" href="">Rooms</a></ul>
+                            <ul><a class="links-nav nav-footer" id="about" href="">About</a></ul>
+                            <ul><a class="links-nav nav-footer" id="contact" href="">Contact</a></ul>
+                        </div>
+                    </div>
+    
+                    <div class="redes-cont cont-footer">                    
+                        <p>Redes</p>
+                        <div class="opcions">
+                            <ul><a class="redes-footer" id="facebook" href="">Facebook</a></ul>
+                            <ul><a class="redes-footer" id="Twitter" href="">Twitter</a></ul>
+                            <ul><a class="redes-footer" id="Instagram" href="">Instagram</a></ul>
+                            <ul><a class="redes-footer" id="Linkedin" href="">Linkedin</a></ul>
+                        </div></div>
+                </div>
+
+                <div class="cont-button">
+                    <button class="buttonBlue-reservar button-footer">
+                        Reservar Ahora!
+                    </button>
+                    <button class="buttonBlue-reservar button-mobile">
+                        Reservar Ahora!
+                    </button>
+                </div>
+            </div>
+            <div class="copyright-cont"><p>Vajamar Hotel © 2024</p></div>
+        </footer>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
