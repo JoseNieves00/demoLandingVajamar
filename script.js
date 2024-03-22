@@ -35,12 +35,11 @@ const menu_icon= document.getElementsByClassName("menu-icon")[0]
 const exit_icon= document.getElementsByClassName("exit-icon")[0]
 const menu_mobile= document.getElementsByClassName("menu-mobile")[0]
 
+const header = document.getElementsByTagName("header")[0]
+const footer = document.getElementsByTagName("footer")[0]
 
-
-console.log(nav_mobile)
-
-home_nav.className = "nav-active"
-home_navMobile.className = "nav-active"
+const button_rooms = document.getElementsByClassName("button-rooms")[0]
+const button_inst=document.getElementsByClassName("button-inst")[0]
 
 filter_cont.style.display = "none";
 exit_icon.style.display = "none";
@@ -60,6 +59,7 @@ ingreso_date.value = fechaActual();
 
 salida_date.value = fechaFictisia();
 
+
 menu_icon.addEventListener("click",()=>{
     abrirMenu()
 })
@@ -69,23 +69,23 @@ exit_icon.addEventListener("click",()=>{
 })
 
 
-for (let i = 0; i < sections.length; i++) {
+
+for (let i = 0; i < links_nav.length; i++) {
     const index = i
     let section = links_nav[index].textContent.toLowerCase()
     links_nav[i].addEventListener("click", (e) => {
         e.preventDefault()
         changeSections(section)
-        changeNavs(section)
     })
 }
+
 
 for (let i = 0; i < sections.length; i++) {
     const index = i
     let section = footer_navs[index].textContent.toLowerCase()
     footer_navs[i].addEventListener("click", (e) => {
         e.preventDefault()
-        changeSections(section)
-        changeNavs(section)
+        changeSections(section)  
     })
 }
 
@@ -94,8 +94,7 @@ for (let i = 0; i < nav_mobile.length; i++) {
     let section = nav_mobile[i].textContent.toLowerCase()
     nav_mobile[i].addEventListener("click", (e) => {
         e.preventDefault()
-        changeNavs(section)
-        changeSections(section)
+        changeSectionsMobile(section)
     })
 }
 
@@ -107,6 +106,15 @@ button_booking.addEventListener("click",()=>{
     enviarReserva(tCuarto,personas,fIngreso,fSalida)
 })
 
+button_rooms.addEventListener("click",()=>{
+    scroll()
+})
+
+button_inst.addEventListener("click",()=>{
+    let section = explore_nav.textContent.toLowerCase()
+    changeSections(section)
+})
+
 
 function changeSections(section) {
     limpiadoSections()
@@ -114,18 +122,26 @@ function changeSections(section) {
         if (sectionsM[i] == section) {
             const index = i
             sections[index].style.display = "block"
+            navs[i].className="nav-active"
+        }else{
+            navs[i].className="links-nav"
         }
-        cerrarMenu()
+        scrollUp()
     }
 }
 
-function changeNavs(section) {
-    limpiadoNavs()
-    for (let i = 0; i < navs.length; i++) {
-        if (navs[i].getAttribute("id") == section) {
+function changeSectionsMobile(section) {
+    limpiadoSections()
+    limpiadoNavsMobile()
+    for (let i = 0; i < sections.length; i++) {
+        if (sectionsM[i] == section) {
             const index = i
-            navs[index].className = "nav-active"
+            sections[index].style.display = "block"
+            console.log(nav_mobile[i])
+            nav_mobile[i].className="nav-active"
         }
+        scrollUp()
+        cerrarMenu()
     }
 }
 
@@ -137,20 +153,12 @@ function limpiadoSections() {
     contact_page.style.display = "none";
 }
 
-function limpiadoNavs() {
-    home_nav.className = "links-nav"
-    explore_nav.className = "links-nav"
-    rooms_nav.className = "links-nav"
-    about_nav.className = "links-nav"
-    contact_nav.className = "links-nav"
-}
-
 function limpiadoNavsMobile() {
-    home_navMobile.className = "links-nav"
-    explore_navMobile.className = "links-nav"
-    rooms_navMobile.className = "links-nav"
-    about_navMobile.className = "links-nav"
-    contact_navMobile.className = "links-nav"
+    home_navMobile.className = "nav-mobile"
+    explore_navMobile.className = "nav-mobile"
+    rooms_navMobile.className = "nav-mobile"
+    about_navMobile.className = "nav-mobile"
+    contact_navMobile.className = "nav-mobile"
 }
 
 function fechaActual() {
@@ -205,6 +213,7 @@ function bloquearDesplazamiento() {
 }
 
 function desbloquearDesplazamiento() {
+    scrollYPos = window.scrollY; 
     document.body.style.position = ''; // Restaurar la posición del cuerpo
     document.body.style.overflowY = ''; // Restaurar el desplazamiento vertical
     document.body.style.top = ''; // Restaurar la posición del cuerpo
@@ -215,14 +224,30 @@ function abrirMenu(){
     filter_cont.style.display="block"
     menu_mobile.style.display="flex"
     menu_icon.style.display="none"
-    exit_icon.style.display="block"
+    exit_icon.style.display="flex"
     bloquearDesplazamiento()
 }
 
 function cerrarMenu(){
     filter_cont.style.display="none"
     menu_mobile.style.display="none"
-    menu_icon.style.display="block"
+    menu_icon.style.display="flex"
     exit_icon.style.display="none"
     desbloquearDesplazamiento()
+}
+
+function scroll(){
+        const cont_rooms = document.getElementsByClassName('cont-rooms')[0];
+        const posicion = cont_rooms.getBoundingClientRect();
+    
+        window.scrollTo({
+            top: posicion.top + window.scrollY, behavior:'smooth'
+        });
+}
+
+function scrollUp(){
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });  
 }

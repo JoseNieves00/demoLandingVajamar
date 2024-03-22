@@ -11,7 +11,7 @@ body{
 
 .contenido{
     height: max-content;
-    margin-top: 4.30%;
+    margin-top: 4.75%;
 }
 
 .filter{
@@ -22,9 +22,9 @@ body{
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100vh;
-    background-color: lightgray;
-    z-index: 1;
-    opacity: 80%;
+    background-color: #FAFAFA;
+    z-index: 90;
+    opacity: 95%;
 }
 
 header{
@@ -41,7 +41,7 @@ header{
 }
 
 
-.btns-mobile,.button-mobile,.map-mobile{
+.btns-mobile,.button-mobile,.map-mobile,.messageMobile{
     display: none;
 }
 
@@ -55,6 +55,7 @@ header nav ul a{
     color: black;
     font-weight: 500;
     transition: 0.2s;
+    cursor: pointer;
 }
 
 header nav ul a:hover{
@@ -498,17 +499,301 @@ header nav ul a:hover{
     transform: translate(-50%, -50%);
 }
 
+/* ROOMS */
+
+.rooms{
+    width: 100%;
+}
+
+.rooms .hero-rooms{
+    width: 100%;
+    background-image: url(img/bg-hero-rooms.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    position: relative;
+}
+
+.filter-sections{
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(49,159,255,0) 0%, rgba(9,102,182,0.7105435924369747) 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.rooms .hero-rooms .content-hero-rooms{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.rooms .hero-rooms .text-content-room h2{
+    margin:4px;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.rooms .hero-rooms .content-hero-rooms button{
+    width: 50px;
+    height: 90px;
+    border: 1px solid white;
+    border-radius: 50px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.rooms .cont-rooms{
+    padding: 7% 0%;
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rooms .cont-rooms .cont-rooms-boxes{
+    width: 90%;
+    display: flex;
+    gap: 10%;
+    flex-wrap: wrap;
+    row-gap: 70px;
+    justify-content: space-around;
+}
+
+.rooms .cont-rooms .cont-rooms-boxes .room-box{
+    border: 1px solid lightgray;
+    width: 390px;
+    display: flex;
+    flex-direction: column;
+}
+
+.rooms .cont-rooms .cont-rooms-boxes .room-box .cont-img{
+    width: 100%;
+    height: 24vh;
+}
+
+.rooms .cont-rooms .cont-rooms-boxes .room-box .cont-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rooms .cont-rooms .cont-rooms-boxes .room-box .details-box{
+    display: flex;
+    width: 100%;
+    gap: 20%;
+    justify-content: space-around;
+    align-items: baseline;
+    padding-bottom: 4%;
+}
+
+.rooms .cont-rooms .cont-rooms-boxes .room-box .details-box h3{
+    margin: 10px 0px;
+}
+
+.rooms .cont-rooms .cont-rooms-boxes .room-box .details-box p{
+    margin: 5px 0px;
+}
+
+.rooms .cont-rooms .cont-rooms-boxes .room-box .cont-book{
+    display: flex;
+    justify-content: center;
+    gap: 30%;
+    border-top: 1px solid #0082F3;
+    padding: 15px 0px;
+}
+
+.rooms .cont-rooms .cont-rooms-boxes .room-box .cont-book .icons-service{
+    display: flex;
+    width: 30%;
+    gap: 10%;
+}
+
+.rooms .cont-rooms .cont-rooms-boxes .room-box .cont-book .icon-box{
+    background-color: #FAFAFA;
+    border: 1PX solid #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2% 10%;
+    border-radius: 50%;
+}
 
 
+.rooms .cont-rooms .cont-rooms-boxes .room-box .cont-book .reservar-cont .buttonReservar-rooms{
+    width: 120px;
+    font-size: 14px;
+}
 
+/* ABOUT */
 
+.about{
+    width: 100%;
+}
 
+.about .hero-about{
+    width: 100%;
+    background-image: url(img/bg-hero-about.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    position: relative;
+}
 
+.about .hero-about .content-hero-about{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
 
+.about .hero-about .text-content-about h2{
+    margin:4px;
+    font-size: 60px;
+    font-weight: 700;
+}
 
+.cont-about{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5% 0%;
+}
 
+.about .cont-about .contorno-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    width: 600PX;
+    height: 420PX;
+}
 
+.about .cont-about .contorno-img .cont-img img{
+    width: 550px;
+}
 
+.about .cont-about .text-cont{
+    width: 40%;
+}
+
+.about .cont-about .text-cont h2{
+    font-weight: 500;
+    font-size: 35px;
+}
+
+/* CONTACT */
+
+.contact{
+    width: 100%;
+}
+
+.contact .hero-contact{
+    width: 100%;
+    background-image: url(img/bg-hero-contact.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    position: relative;
+}
+
+.contact .hero-contact .content-hero-contact{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.contact .hero-contact .text-content-contact h2{
+    margin:4px;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.cont-contact{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0px;
+}
+
+.contact .cont-contact form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 30px;
+}
+
+.contact .cont-contact form input{
+    padding: 15px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.contact .cont-contact form .part1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact .cont-contact form .part1 .input-cont{
+    width: 35%;
+}
+
+.contact .cont-contact form .input-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contact .cont-contact form .message-cont .message-inpt{
+    padding: 15px;
+    font-family: "Poppins", sans-serif;
+}
+
+.contact .cont-contact form .enviar-cont{
+    display: flex;
+    justify-content: end;
+}
+
+.contact .cont-contact form .enviar-cont .button-enviar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact .cont-contact form .enviar-cont .button-enviar img{
+    filter: invert(1);
+}
 
 
 
@@ -597,11 +882,11 @@ footer .button-footer:hover{
 } 
 
 /* Estilos para pantallas pequeñas (teléfonos) */
-@media (max-width: 500px) {
+@media (min-width: 300px) and (max-width:700px) {
 
     .menu-mobile{
         position: fixed;
-        z-index: 2;
+        z-index: 91;
         width: 100%;
         height: 100%;
         padding-top: 30%;
@@ -624,7 +909,7 @@ footer .button-footer:hover{
     }
 
     .nav-active{
-        color: aqua;
+        color: #0082F3;
     }
 
     .menu-mobile a{
@@ -643,7 +928,7 @@ footer .button-footer:hover{
     }
 
 
-    .ubicacion-cont .map-cont{
+    .ubicacion-cont .map-cont,.messageDesktop{
         display: none;
     }
 
@@ -687,20 +972,25 @@ footer .button-footer:hover{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: fit-content;
-        height: fit-content;
+        width: 70px;
+        height: 4vh;
     }
 
     .menu-icon,.exit-icon{
-        width: 25px;
+        padding-top: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         height: 25px;
-        margin-bottom: 8.5px;
-        display: block;
     }
 
-    .exit-icon{
-        margin-bottom: 20px;
+    .menu-icon img{
+        object-fit: cover;
     }
+
+    .exit-icon img{
+        object-fit: cover;
+    }  
 
     .contenido{
         display: flex;
@@ -867,6 +1157,10 @@ footer .button-footer:hover{
         justify-content: center;
     }
 
+    .explore .video-cont{
+        height: 75vh;
+    }
+
     .explore .instalaciones-cont{
         flex-direction: column;
         align-items: center;
@@ -885,6 +1179,103 @@ footer .button-footer:hover{
         height: 400px
     }
 
+    .rooms .hero-rooms{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 75vh;
+    }
+
+    .rooms .hero-rooms .content-hero-rooms{
+        width: 80%;
+        margin-top: 30%;
+    }
+
+    .rooms .hero-rooms .text-content-room h2{
+        font-size: 50px;
+    }
+
+    .rooms .cont-rooms{
+        padding: 20% 0%;
+    }
+
+    .about .hero-about{
+        height: 75vh;
+    }
+
+    .abou .hero-about .content-hero-about .text-content-about{
+        text-align: center;
+    }
+
+    .cont-about{
+        flex-direction: column-reverse;
+        gap: 60px;
+        padding:50px 0px;
+    }
+
+    .about .text-cont{
+        width: 85% !important;
+    }
+
+    .about .text-cont h2{
+        text-align: center;
+    }
+
+    .about .cont-about .contorno-img{
+        width: 90%;
+        height: 30vh;
+        border: 0px;
+        border-radius: 3px;
+    }
+    
+    .about .cont-about .contorno-img .cont-img{
+        padding-top: 2.5%;
+        width: 90%;
+        height: 95%;
+    }
+
+    
+    .about .cont-about .contorno-img .cont-img img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+
+    .contact .hero-contact{
+        height: 75vh;
+    }
+
+    .contact .hero-contact .text-content-contact{
+        width: 90%;
+    }
+
+    .contact .hero-contact .text-content-contact h2{
+        font-size: 50px;
+    }
+
+    .contact .cont-contact{
+        padding: 15% 0px;
+    }
+
+    .contact .cont-contact form .part1{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contact .cont-contact form .part1 .input-cont{
+        width: 100%;
+        gap: 10px;
+    }
+
+    .contact .cont-contact form .message-cont .messageMobile{
+        display: block;
+    }
+
+    .contact .cont-contact form .enviar-cont button{
+        width: 100%;
+        font-size: 18px;
+    }
 
 
 
@@ -946,5 +1337,504 @@ footer .button-footer:hover{
     
     .button-mobile:hover{
         background-color: #dddddd;
+    }
+
+    .button-menu{
+        display: block;
+        color: white;
+        width: 100%;
+        height: 60px;
+        border-radius: 5px;
+        border: 0px;
+        background-color: #0082F3;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+}
+
+@media only screen and (min-width: 701px) and (max-width: 1200px) {
+    /* Ajustes de diseño para pantallas medianas */
+    .menu-mobile{
+        position: fixed;
+        z-index: 91;
+        width: 100%;
+        height: 100%;
+        padding-top: 30%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5%;
+        background: transparent;
+    }
+
+    .menu-mobile{
+        position: fixed;
+        z-index: 91;
+        width: 100%;
+        height: 100%;
+        padding-top: 30%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5%;
+        background: transparent;
+    }
+
+    .menu-mobile ul{
+        padding: 0px;
+    }
+
+    .nav-mobile{
+        color: black;
+    }
+
+    .nav-active{
+        color: #0082F3;
+    }
+
+    .menu-mobile a{
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .menu-mobile button{
+        width: 90%;
+    }
+
+    .menu-mobile button:active{
+        background-color: #0082F3;
+        color: white;
+    }
+
+
+    .ubicacion-cont .map-cont,.messageDesktop{
+        display: none;
+    }
+
+    .map-mobile{
+        display: block;
+        width: 100%;
+        height: 65vh;
+    }
+
+    header{
+        width: 100%;
+        padding: 20px 0px;
+        gap: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .logo-cont{
+        width: fit-content;
+    }
+
+    header .logo-cont img{
+        width: 250px;
+    }
+
+    .filter{
+        width: 100%;
+        height: 200vh;
+    }
+
+    .contenedor{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    header nav{
+        display: none;
+    }
+    .btns-mobile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 4vh;
+    }
+
+    .menu-icon,.exit-icon{
+        padding-top: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 25px;
+    }
+
+    .menu-icon img{
+        object-fit: cover;
+    }
+
+    .exit-icon img{
+        object-fit: cover;
+    }  
+
+    .contenido{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        margin-top: 8.5%;
+    }
+
+    .hero{
+        width: 100%;
+        padding-top: 40px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .buttonBlue-reservar{
+        display: none;
+    }
+
+    .hero1{
+        width: 70%;
+        margin: 40px;
+        gap: 70px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero1 .text{
+        width: 95%;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .hero1{
+        justify-content: center;
+    }
+
+    .hero2{
+        align-self: center;
+        width: 90%;
+    }
+
+    .buttons-cont{
+        justify-content: center;
+        width: 90%;
+    }
+
+    .buttonplay-cont{
+        display: none;
+    }
+
+    .button-hero{
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .booking-cont{
+        display: none;
+    }
+
+    .services-cont{
+        display: flex;
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    .services-cont .text{
+        width: 80%;
+    }
+
+    .services-boxes{
+        width: 90% !important;
+    }
+
+    .services-boxes .box{
+        width: 45%;
+        height: 22vh;
+        text-align: center;
+    }
+
+    .services-boxes .box .title{
+        width: 90%;
+    }
+
+    .habitaciones-home{
+        display: flex;
+        height: 190vh;
+        margin-bottom: 0px;
+    }
+
+    .content-habitaciones{
+        flex-direction: column;
+        align-items: center;
+        height: 190vh;
+    }
+
+    .title-habitaciones{
+        width: 40%;
+    }
+
+    .title-habitaciones .separador{
+        width: 70%;
+    }
+
+    .title-habitaciones h2{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .boxes-habitaciones{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 100px;
+        height: 130vh;
+    }
+
+    .boxes-habitaciones .box-habitacion{
+        width: 80%;
+        height: 700px;
+    }
+
+    .box-habitacion .contorno-img{
+        background-color: aquamarine;
+        width: 90%;
+        height: 90%;
+    }
+
+    .box-habitacion .cont-img{
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .box-habitacion .cont-img img{
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .ubicacion-cont{
+        display: flex;
+        height: fit-content;
+    }
+
+    .ubicacion-cont h2{
+        width: 90%;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .map-cont{
+        display: flex;
+        height: 80%;
+    }
+
+    .explore{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .explore .video-cont{
+        height: 75vh;
+    }
+
+    .explore .instalaciones-cont{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .explore .instalaciones-cont .title-instalaciones{
+        text-align: center;
+    }
+
+    .explore .instalaciones-cont .boxes-instalaciones{
+        width: 90%;
+    }
+
+    .explore .instalaciones-cont .box-instalaciones .cont-img img{
+        height: 400px
+    }
+
+    .rooms .hero-rooms{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 75vh;
+    }
+
+    .rooms .hero-rooms .content-hero-rooms{
+        width: 80%;
+        margin-top: 30%;
+    }
+
+    .rooms .hero-rooms .text-content-room h2{
+        font-size: 50px;
+    }
+
+    .rooms .cont-rooms{
+        padding: 20% 0%;
+    }
+
+    .about .hero-about{
+        height: 75vh;
+    }
+
+    .abou .hero-about .content-hero-about .text-content-about{
+        text-align: center;
+    }
+
+    .cont-about{
+        flex-direction: column-reverse;
+        gap: 60px;
+        padding:50px 0px;
+    }
+
+    .about .text-cont{
+        width: 85% !important;
+    }
+
+    .about .text-cont h2{
+        text-align: center;
+    }
+
+    .about .cont-about .contorno-img{
+        width: 90%;
+        height: 45vh;
+        border: 0px;
+        border-radius: 3px;
+    }
+    
+    .about .cont-about .contorno-img .cont-img{
+        width: 90%;
+    }
+
+    
+    .about .cont-about .contorno-img .cont-img img{
+        width: 100%;
+    }
+
+
+    .contact .hero-contact{
+        height: 75vh;
+    }
+
+    .contact .hero-contact .text-content-contact{
+        width: 90%;
+    }
+
+    .contact .hero-contact .text-content-contact h2{
+        font-size: 50px;
+    }
+
+    .contact .cont-contact{
+        padding: 15% 0px;
+    }
+
+    .contact .cont-contact form .part1{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contact .cont-contact form .part1 .input-cont{
+        width: 100%;
+        gap: 10px;
+    }
+
+    .contact .cont-contact form .message-cont .messageMobile{
+        display: block;
+    }
+
+    .contact .cont-contact form .enviar-cont button{
+        width: 100%;
+        font-size: 18px;
+    }
+
+
+
+    footer{
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    padding-bottom: 10px;
+    justify-content: start;
+    align-items: center;
+    }
+
+    .info-cont{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .info-hotel{
+    display: none;
+    }
+
+    .info-cont .block{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .cont-footer{
+        text-align: center;
+    }
+
+    .copyright-cont{
+        padding-bottom: 10px;
+    }
+
+    .button-footer{
+        display: none;
+    }
+
+    .cont-button{
+        width: 90%;
+    }
+
+    .button-mobile{
+        display: block;
+        color: #0082F3;
+        width: 100%;
+        height: 60px;
+        border-radius: 5px;
+        border: 0px;
+        background-color: white;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    
+    .button-mobile:hover{
+        background-color: #dddddd;
+    }
+
+    .button-menu{
+        display: block;
+        color: white;
+        width: 100%;
+        height: 60px;
+        border-radius: 5px;
+        border: 0px;
+        background-color: #0082F3;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: 0.2s;
     }
 }
